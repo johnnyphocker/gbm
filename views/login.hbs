@@ -1,0 +1,19 @@
+<form action="/login" method="POST" id="form">
+  <h2>Loguéate</h2>
+
+  <label for="username">Usuario</label>
+  <input type="text" name="username" placeholder="Tu usuario">
+
+  <label for="password">Contraseña</label>
+  <input type="password" name="password" placeholder="Tu contraseña">
+
+  {{#if errorMessage }}
+    <div class="error-message">{{ errorMessage }}</div>
+  {{/if}}
+
+  <button>Entrar</button>
+
+  <p class="account-message">
+    ¿No tienes una cuenta? <a href="/signup">Créala</a>
+  </p>
+</form>
